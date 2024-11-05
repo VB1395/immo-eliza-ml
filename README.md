@@ -33,13 +33,13 @@ Here is an example of the evaluation results for the test set, with three differ
 | Model           | MAE         |   RMSE         | R2    |
 |                 |             |                |       |
 | LinearRegressor | 157,736.80  | 349,050.53     | 0.42  |
-| Random Forest   |  93,743.94  | 199,429.04     | 0.81  |
+| Random Forest   |  93,455.80  | 199,963.49     | 0.81  |
 | CatBoost        |  92,223.55  | 199,075.41     | 0.81  |
 
 ```
 ## 👩‍💻 Usage
 
-1 .Clone the repository to your local machine.
+1 . Clone the repository to your local machine.
 
 2 .Set Up Your Environment:
 
