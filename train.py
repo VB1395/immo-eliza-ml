@@ -4,6 +4,11 @@ from catboost import CatBoostRegressor
 import pickle
 
 def cleaning_data():
+    '''
+    cleaning houses.csv file. combining all binary columns into one. Adding values in 
+    other aminities column if value is present. Dropping columns with high number of null 
+    values. Also deleting rows with high number of null values. Returning new clean_data file. 
+    '''
     df= pd.read_csv('./data/houses.csv')
 
     other_amenities_col = ['fl_furnished','fl_double_glazing','fl_open_fire','fl_swimming_pool','fl_floodzone']
@@ -15,6 +20,11 @@ def cleaning_data():
     return df.to_csv("./data/clean_data.csv",index=False)
 
 def training():
+    '''
+    In this function spliting dataset for train and test. test size is 0.2 which is divide
+    80% of data for train and 20% for test. Using catboost regression so training input 
+    feature columns(object) for encoding. Used hyperparameter tuning for better performance.
+    '''
     df= pd.read_csv('./data/clean_data.csv')
     X= df.drop(['price'],axis = 1)
     y= df['price']
@@ -25,7 +35,7 @@ def training():
     model.fit(X,y,cat_features= categorical_feature)
 
     # Pickle the model
-    with open('model.pkl', 'wb') as file: #writing bina file for module
+    with open('model.pkl', 'wb') as file: #writing binary file for module
         pickle.dump(model, file)
 
 

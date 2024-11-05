@@ -39,7 +39,7 @@ Here is an example of the evaluation results for the test set, with three differ
 ```
 ## 👩‍💻 Usage
 
-1. Clone the repository to your local machine.
+1 .Clone the repository to your local machine.
 
 2 .Set Up Your Environment:
 

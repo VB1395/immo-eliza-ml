@@ -2,7 +2,12 @@ import pickle
 import pandas as pd
 from train import cleaning_data, training
 
-def test():
+def predict():
+    '''
+    In this function using model which was trained before for predicting prices. It will 
+    take test file as input and return test_ouput.csv with predicted price columns for 
+    houses. 
+    '''
     with open('model.pkl', 'rb') as file:
         loaded_model = pickle.load(file)
 
@@ -17,7 +22,7 @@ def test():
 
 
 if __name__ == "__main__":
-    cleaning_data()
-    training()
-    test()
+    cleaning_data()     # cleaning data
+    training()          # training data    
+    predict()           # predicting prices for houses
 
